@@ -1,54 +1,56 @@
 #include<stdio.h>
+#include<math.h>
 void List();
 double A(double sum1);
 double B(double sum2);
 main()
 {
 	int sel;
-	double sum1,sum2;
+	double sum1,sum2,sum;
 	List();
-	printf("ÇëÑ¡Ôñ:");
+	printf("è¯·é€‰æ‹©:");
 	scanf("%d",&sel);
 	if(sel==1)
-		A(sum1);
+		sum=A(sum1);
 	else if(sel==2)
-		B(sum2);
+		sum=B(sum2);
+	printf("ç»“æœ:%lf\n",sum);
 	return 0;
 }
 
 void List()
 {
 	printf("\t|--------------------------------------|\n");
-	printf("\t|              Ä¿Â¼                    |\n");
+	printf("\t|              ç›®å½•                    |\n");
 	printf("\t|--------------------------------------|\n");
-	printf("\t|           1.Ò»´ÎÖ§¸¶                 |\n");
-	printf("\t|           2.µÈ¶î¶à´ÎÖ§¸¶             |\n");
+	printf("\t|           1.ä¸€æ¬¡æ”¯ä»˜                 |\n");
+	printf("\t|           2.ç­‰é¢å¤šæ¬¡æ”¯ä»˜             |\n");
 	printf("\t|--------------------------------------|\n");
 }
 double A(double sum1)
 {
 	int n;
 	double p,i;
-	printf("ÇëÊäÈë´æ·Å×Ü½ğ¶îp:");
+	printf("è¯·è¾“å…¥å­˜æ”¾æ€»é‡‘é¢p:");
 	scanf("%lf",&p);
-	printf("ÇëÊäÈëÀûÂÊ:");
+	printf("è¯·è¾“å…¥åˆ©ç‡:");
 	scanf("%lf",&i);
-	printf("ÇëÊäÈëÊ±¼ä£¨Äê£©:");
+	printf("è¯·è¾“å…¥æ—¶é—´ï¼ˆå¹´ï¼‰:");
 	scanf("%d",&n);
-	sum1=p(1+i)^n;	
+	sum1=p*pow((1+i),n);	
 	return sum1;
 }
 double B(double sum2)
 {
 	int n;
 	double p,i;
-	printf("ÇëÊäÈëÃ¿Äê´æ·ÅµÄ½ğ¶îp:");
+	printf("è¯·è¾“å…¥æ¯å¹´å­˜æ”¾çš„é‡‘é¢p:");
 	scanf("%lf",&p);
-	printf("ÇëÊäÈëÀûÂÊ:");
+	printf("è¯·è¾“å…¥åˆ©ç‡:");
 	scanf("%lf",&i);
-	printf("ÇëÊäÈëÊ±¼ä£¨Äê£©:");
+	printf("è¯·è¾“å…¥æ—¶é—´ï¼ˆå¹´ï¼‰:");
 	scanf("%d",&n);
-	sum2=p((1+i)^n-1)/i;	
+	sum2=p(pow((1+i)*n)-1)/i;	
 	return sum2;
 }
 
