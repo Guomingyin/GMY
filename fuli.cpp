@@ -50,7 +50,7 @@ double B(double sum2)
 	scanf("%lf",&i);
 	printf("请输入时间（年）:");
 	scanf("%d",&n);
-	sum2=p(pow((1+i)*n)-1)/i;	
+	sum2=p*(pow((1+i),n)-1)/i;	
 	return sum2;
 }
 
